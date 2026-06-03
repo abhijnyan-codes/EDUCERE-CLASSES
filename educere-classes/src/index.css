@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium SaaS Design Tokens */
+  --color-brand-navy: #050B14;
+  --color-brand-card: #0C1627;
+  --color-brand-orange: #FF5C00;
+  --color-brand-orange-glow: rgba(255, 92, 0, 0.5);
+
+  /* Animation Configurations */
+  --animate-blob: blob 7s infinite;
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+}
+
+/* Global Elements & Layout Modifiers */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-navy);
+  color: #E2E8F0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar Utility */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-navy);
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-orange);
+}
